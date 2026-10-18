@@ -1,0 +1,402 @@
+customer_id,customer_name,customer_type,dc_code,city,first_seen,valid_from
+-1,Unknown customer,unknown,UNKNOWN,,,
+100001,Ruzicka Market,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100002,Bistro Vesely,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100003,Sedlacek Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100004,Hajek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100005,Bar Dvorak,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100006,Dvorak Drinks Wholesale,wholesaler,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100007,Minimarket Kral,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100008,Cerny Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100009,Beer Hall Pospisil,bar,CZ01,Prague,2026-03-01,2026-03-01
+100010,Pub Zeman,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100011,Bar Novak,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100012,Novak Drinks Wholesale,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100013,Zeman Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100014,Hajek Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100015,Bar Dvorak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100016,Tavern Sedlacek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100017,Sedlacek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100018,Tavern Pospisil,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100019,Jelinek Market,unknown,CZ01,Prague,2026-03-01,2026-03-01
+100020,Kucera Market,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100021,Minimarket Svoboda,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100022,Tavern Hajek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100023,Kucera Beverages,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100024,Kral Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100025,Minimarket Fiala,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100026,Pub Novak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100027,Pub Hajek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100028,Pub Prochazka,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100029,Bistro Sedlacek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100030,Minimarket Kucera,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100031,Jelinek Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100032,Hajek Beverages,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100033,Tavern Horak,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100034,Beer Hall Kral,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100035,Tavern Ruzicka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100036,Beer Hall Hajek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100037,Bar Benes,bar,CZ01,Prague,2026-03-01,2026-03-01
+100038,Beer Hall Zeman,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100039,Pub Nemec,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100040,Minimarket Pospisil,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100041,Bistro Novak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100042,Benes Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100043,Pospisil Grocery,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100044,Tavern Nemec,bar,CZ01,Prague,2026-03-01,2026-03-01
+100045,Minimarket Svoboda,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100046,Minimarket Sedlacek,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100047,Beer Hall Horak,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100048,Pub Kral,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100049,Dvorak Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100050,Bar Zeman,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100051,Bar Cerny,bar,CZ01,Prague,2026-03-01,2026-03-01
+100052,Beer Hall Cerny,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100053,Minimarket Sedlacek,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100054,Minimarket Dolezal,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100055,Prochazka Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100056,Marek Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100057,Bistro Ruzicka,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100058,Sedlacek Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100059,Beer Hall Horak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100060,Tavern Pospisil,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100061,Ruzicka Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100062,Beer Hall Ruzicka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100063,Benes Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100064,Minimarket Hajek,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100065,Dvorak Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100066,Minimarket Dolezal,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100067,Minimarket Sedlacek,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100068,Bistro Benes,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100069,Tavern Svoboda,bar,CZ01,Prague,2026-03-01,2026-03-01
+100070,Pub Prochazka,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100071,Tavern Ruzicka,bar,CZ02,Brno,2026-03-01,2026-03-01
+100072,Tavern Novak,bar,CZ02,Brno,2026-03-01,2026-03-01
+100073,Zeman Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100074,Bistro Horak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100075,Bistro Ruzicka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100076,Bistro Sedlacek,bar,CZ02,Brno,2026-03-01,2026-03-01
+100077,Beer Hall Horak,bar,CZ02,Brno,2026-03-01,2026-03-01
+100078,Vesely Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100079,Jelinek Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100080,Hajek Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100081,Nemec Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100082,Pub Jelinek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100083,Dolezal Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100084,Tavern Marek,bar,CZ02,Brno,2026-03-01,2026-03-01
+100085,Pub Cerny,bar,CZ01,Prague,2026-03-01,2026-03-01
+100086,Bar Horak,bar,CZ02,Brno,2026-03-01,2026-03-01
+100087,Horak Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100088,Beer Hall Dvorak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100089,Bar Cerny,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100090,Kral Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100091,Pub Vesely,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100092,Zeman Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100093,Beer Hall Prochazka,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100094,Pub Svoboda,bar,CZ02,Brno,2026-03-01,2026-03-01
+100095,Tavern Benes,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100096,Sedlacek Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100097,Bar Kucera,bar,CZ02,Brno,2026-03-01,2026-03-01
+100098,Tavern Prochazka,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100099,Bistro Cerny,bar,CZ02,Brno,2026-03-01,2026-03-01
+100100,Pospisil Beverages,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100101,Marek Beverages,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100102,Kucera Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100103,Pub Novak,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100104,Marek Beverages,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100105,Zeman Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100106,Kral Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100107,Beer Hall Marek,bar,CZ02,Brno,2026-03-01,2026-03-01
+100108,Bistro Dvorak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100109,Bar Kucera,bar,CZ02,Brno,2026-03-01,2026-03-01
+100110,Kucera Beverages,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100111,Bar Benes,bar,CZ01,Prague,2026-03-01,2026-03-01
+100112,Bar Sedlacek,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100113,Beer Hall Dolezal & Sons,bar,CZ01,Prague,2026-03-01,2026-08-01
+100114,Zeman Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100115,Beer Hall Zeman,bar,CZ02,Brno,2026-03-01,2026-03-01
+100116,Zeman Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100117,Svoboda Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100118,Dvorak Grocery,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100119,Bistro Vesely,bar,CZ01,Prague,2026-03-01,2026-03-01
+100120,Hajek Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100121,Svoboda Grocery,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100122,Minimarket Fiala,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100123,Beer Hall Jelinek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100124,Tavern Pospisil & Sons,bar,CZ03,Ostrava,2026-03-01,2026-07-19
+100125,Tavern Cerny,bar,CZ01,Prague,2026-03-01,2026-03-01
+100126,Pub Kucera,bar,CZ02,Brno,2026-03-01,2026-03-01
+100127,Tavern Cerny,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100128,Pub Sedlacek,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100129,Bar Hajek,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100130,Ruzicka Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100131,Beer Hall Kucera,bar,UNKNOWN,Plzen,2026-03-01,2026-03-01
+100132,Horak Drinks Wholesale,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100133,Minimarket Nemec,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100134,Pub Benes,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100135,Benes Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100136,Pub Prochazka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100137,Dolezal Drinks Wholesale,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100138,Tavern Dvorak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100139,Sedlacek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100140,Beer Hall Dvorak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100141,Bar Kucera,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100142,Pub Fiala,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100143,Cerny Drinks Wholesale,wholesaler,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100144,Nemec Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100145,Pub Nemec,bar,CZ01,Prague,2026-03-01,2026-03-01
+100146,Pub Prochazka,bar,CZ02,Brno,2026-03-01,2026-03-01
+100147,Bistro Ruzicka,bar,CZ02,Brno,2026-03-01,2026-03-01
+100148,Sedlacek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100149,Tavern Sedlacek,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100150,Beer Hall Vesely,bar,CZ02,Brno,2026-03-01,2026-03-01
+100151,Pospisil Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100152,Minimarket Prochazka,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100153,Bar Prochazka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100154,Cerny Market,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100155,Pub Dolezal,bar,CZ01,Prague,2026-03-01,2026-03-01
+100156,Sedlacek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100157,Pub Benes,bar,CZ01,Prague,2026-03-01,2026-03-01
+100158,Pospisil Market,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100159,Marek Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100160,Pospisil Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100161,Bar Pospisil,bar,CZ01,Prague,2026-03-01,2026-03-01
+100162,Nemec Drinks Wholesale,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100163,Bar Dvorak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100164,Bar Dvorak,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100165,Zeman Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100166,Pub Marek,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100167,Minimarket Zeman,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100168,Cerny Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100169,Bar Hajek & Sons,bar,CZ02,Brno,2026-03-01,2026-07-04
+100170,Prochazka Drinks Wholesale,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100171,Pub Kucera,bar,CZ02,Brno,2026-03-01,2026-03-01
+100172,Minimarket Novak,retailer,CZ03,Ceske Budejovice,2026-03-01,2026-03-01
+100173,Bar Dvorak,bar,CZ02,Brno,2026-03-01,2026-03-01
+100174,Dolezal Beverages,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100175,Pub Vesely,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100176,Bistro Jelinek,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100177,Pub Marek,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100178,Nemec Drinks Wholesale,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100179,Pospisil Grocery,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100180,Cerny Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100181,Minimarket Zeman,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100182,Fiala Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100183,Minimarket Ruzicka,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100184,Bar Marek,bar,CZ02,Brno,2026-03-01,2026-03-01
+100185,Minimarket Cerny,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100186,Minimarket Dolezal,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100187,Beer Hall Vesely,bar,CZ01,Prague,2026-03-01,2026-03-01
+100188,Tavern Svoboda,bar,CZ02,Brno,2026-03-01,2026-03-01
+100189,Minimarket Vesely,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100190,Pub Benes,bar,CZ01,Prague,2026-03-01,2026-03-01
+100191,Jelinek Drinks Wholesale,wholesaler,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100192,Pub Benes,bar,CZ02,Brno,2026-03-01,2026-03-01
+100193,Beer Hall Benes,bar,CZ02,Brno,2026-03-01,2026-03-01
+100194,Minimarket Prochazka,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100195,Bar Dolezal,bar,CZ01,Prague,2026-03-01,2026-03-01
+100196,Tavern Nemec,bar,CZ01,Prague,2026-03-01,2026-03-01
+100197,Jelinek Market,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100198,Minimarket Novak,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100199,Tavern Zeman,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100200,Bar Kucera,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100201,Minimarket Svoboda,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100202,Marek Beverages,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100203,Minimarket Dvorak,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100204,Tavern Cerny,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100205,Beer Hall Jelinek,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100206,Tavern Horak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100207,Pub Dolezal,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100208,Vesely Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100209,Tavern Ruzicka,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100210,Minimarket Marek,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100211,Kral Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100212,Hajek Grocery,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100213,Pub Marek,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100214,Zeman Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100215,Vesely Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100216,Cerny Grocery,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100217,Pub Kral,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100218,Bistro Fiala,bar,CZ02,Brno,2026-03-01,2026-03-01
+100219,Novak Drinks Wholesale,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100220,Bistro Nemec,bar,CZ01,Prague,2026-03-01,2026-03-01
+100221,Bar Sedlacek,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100222,Beer Hall Ruzicka,bar,CZ02,Brno,2026-03-01,2026-03-01
+100223,Zeman Market,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100224,Pospisil Beverages,wholesaler,CZ02,Brno,2026-03-01,2026-03-01
+100225,Beer Hall Kral,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100226,Vesely Beverages,wholesaler,CZ02,Brno,2026-03-01,2026-03-01
+100227,Bar Dolezal,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100228,Minimarket Horak,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100229,Minimarket Ruzicka,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100230,Bar Nemec,bar,UNKNOWN,Ceske Budejovice,2026-03-01,2026-03-01
+100231,Bistro Hajek,bar,UNKNOWN,Hradec Kralove,2026-03-01,2026-03-01
+100232,Pub Ruzicka,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100233,Pospisil Drinks Wholesale,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100234,Minimarket Dolezal,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100235,Nemec Beverages,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100236,Jelinek Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100237,Tavern Vesely,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100238,Minimarket Nemec,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100239,Tavern Nemec,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100240,Bar Dvorak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100241,Minimarket Svoboda,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100242,Kral Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100243,Pub Kral,bar,CZ01,Prague,2026-03-01,2026-03-01
+100244,Minimarket Kral,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100245,Novak Market,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100246,Minimarket Vesely,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100247,Minimarket Cerny,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100248,Pub Benes,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100249,Bistro Sedlacek,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100250,Beer Hall Prochazka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100251,Minimarket Kral,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100252,Dvorak Market,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100253,Bistro Kucera,unknown,CZ04,Plzen,2026-03-01,2026-03-01
+100254,Beer Hall Dvorak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100255,Bar Kucera,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100256,Kral Market,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100257,Minimarket Dolezal,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100258,Beer Hall Prochazka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100259,Bistro Pospisil,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100260,Ruzicka Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100261,Beer Hall Zeman,bar,CZ01,Prague,2026-03-01,2026-03-01
+100262,Jelinek Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100263,Beer Hall Kucera,bar,CZ01,Prague,2026-03-01,2026-03-01
+100264,Bar Jelinek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100265,Vesely Beverages,wholesaler,CZ02,Brno,2026-03-01,2026-03-01
+100266,Beer Hall Zeman,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100267,Tavern Horak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100268,Tavern Kral,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100269,Tavern Novak & Sons,bar,CZ01,Prague,2026-03-01,2026-06-07
+100270,Tavern Nemec,unknown,CZ02,Brno,2026-03-01,2026-03-01
+100271,Beer Hall Sedlacek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100272,Bistro Jelinek,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100273,Bar Nemec,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100274,Dolezal Market & Sons,retailer,CZ04,Plzen,2026-03-01,2026-05-30
+100275,Minimarket Sedlacek,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100276,Bar Vesely,bar,CZ02,Brno,2026-03-01,2026-03-01
+100277,Bistro Pospisil,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100278,Minimarket Marek,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100279,Jelinek Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100280,Minimarket Vesely,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100281,Bistro Prochazka,bar,CZ01,Prague,2026-03-01,2026-03-01
+100282,Tavern Dolezal,bar,CZ01,Prague,2026-03-01,2026-03-01
+100283,Bistro Dolezal,bar,CZ01,Prague,2026-03-01,2026-03-01
+100284,Bar Fiala,bar,CZ02,Brno,2026-03-01,2026-03-01
+100285,Minimarket Zeman,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100286,Pub Ruzicka,bar,CZ02,Brno,2026-03-01,2026-03-01
+100287,Bistro Benes,bar,CZ02,Brno,2026-03-01,2026-03-01
+100288,Bar Benes,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100289,Marek Market,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100290,Beer Hall Marek,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100291,Minimarket Prochazka,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100292,Beer Hall Jelinek,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100293,Kucera Drinks Wholesale,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100294,Bar Kucera,bar,CZ02,Brno,2026-03-01,2026-03-01
+100295,Hajek Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100296,Nemec Beverages,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100297,Prochazka Beverages,wholesaler,CZ04,Plzen,2026-03-01,2026-03-01
+100298,Fiala Grocery,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100299,Sedlacek Market,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100300,Cerny Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100301,Novak Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100302,Pub Vesely,bar,CZ02,Brno,2026-03-01,2026-03-01
+100303,Benes Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100304,Fiala Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100305,Dvorak Market,retailer,UNKNOWN,Prague,2026-03-01,2026-03-01
+100306,Beer Hall Benes,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100307,Beer Hall Dvorak,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100308,Horak Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100309,Tavern Zeman,bar,CZ02,Brno,2026-03-01,2026-03-01
+100310,Bar Cerny & Sons,bar,CZ02,Brno,2026-03-01,2026-04-18
+100311,Bistro Cerny,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100312,Pub Nemec,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100313,Tavern Jelinek,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100314,Bistro Dolezal,bar,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100315,Bar Zeman,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100316,Beer Hall Svoboda,bar,CZ01,Prague,2026-03-01,2026-03-01
+100317,Bistro Dvorak,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100318,Benes Grocery,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100319,Bar Kucera,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100320,Sedlacek Beverages,wholesaler,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100321,Kral Beverages,wholesaler,CZ03,Ostrava,2026-03-01,2026-03-01
+100322,Tavern Dvorak,bar,CZ02,Brno,2026-03-01,2026-03-01
+100323,Beer Hall Fiala,bar,CZ01,Prague,2026-03-01,2026-03-01
+100324,Cerny Grocery,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100325,Nemec Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100326,Hajek Grocery & Sons,retailer,CZ01,Prague,2026-03-01,2026-08-18
+100327,Pospisil Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100328,Kral Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100329,Minimarket Kral,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100330,Pub Zeman,bar,CZ03,Ostrava,2026-03-01,2026-03-01
+100331,Zeman Market & Sons,retailer,CZ02,Brno,2026-03-01,2026-06-21
+100332,Pub Pospisil,bar,CZ01,Prague,2026-03-01,2026-03-01
+100333,Svoboda Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100334,Minimarket Ruzicka,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100335,Pub Zeman,bar,CZ01,Prague,2026-03-01,2026-03-01
+100336,Vesely Market,retailer,CZ04,Plzen,2026-03-01,2026-03-01
+100337,Bar Marek,bar,CZ01,Prague,2026-03-01,2026-03-01
+100338,Nemec Market,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100339,Bar Svoboda,bar,CZ02,Brno,2026-03-01,2026-03-01
+100340,Kral Beverages,wholesaler,CZ02,Brno,2026-03-01,2026-03-01
+100341,Beer Hall Horak,bar,CZ01,Prague,2026-03-01,2026-03-01
+100342,Benes Beverages,wholesaler,CZ01,Prague,2026-03-01,2026-03-01
+100343,Minimarket Fiala,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100344,Minimarket Fiala,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100345,Minimarket Nemec,retailer,CZ03,Ostrava,2026-03-01,2026-03-01
+100346,Vesely Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100347,Ruzicka Beverages,wholesaler,CZ02,Brno,2026-03-01,2026-03-01
+100348,Beer Hall Fiala,bar,CZ02,Brno,2026-03-01,2026-03-01
+100349,Marek Market,retailer,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100350,Bar Sedlacek,bar,CZ05,Ceske Budejovice,2026-03-01,2026-03-01
+100351,Dvorak Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100352,Tavern Sedlacek,bar,CZ02,Brno,2026-03-01,2026-03-01
+100353,Minimarket Svoboda,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100354,Cerny Market,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100355,Bar Pospisil,bar,CZ04,Plzen,2026-03-01,2026-03-01
+100356,Svoboda Market,retailer,CZ01,Prague,2026-03-01,2026-03-01
+100357,Svoboda Grocery,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100358,Novak Market,retailer,CZ06,Hradec Kralove,2026-03-01,2026-03-01
+100359,Pub Nemec,bar,CZ01,Prague,2026-03-01,2026-03-01
+100360,Minimarket Benes,retailer,CZ02,Brno,2026-03-01,2026-03-01
+100361,Novak Beverages,wholesaler,CZ04,Plzen,2026-03-15,2026-03-15
+100362,Bar Kral,bar,CZ01,Prague,2026-03-19,2026-03-19
+100363,Beer Hall Fiala,bar,CZ01,Prague,2026-03-22,2026-03-22
+100364,Bar Cerny,bar,CZ01,Prague,2026-03-25,2026-03-25
+100365,Dvorak Market,retailer,CZ06,Hradec Kralove,2026-03-30,2026-03-30
+100366,Pub Sedlacek,bar,CZ01,Prague,2026-04-04,2026-04-04
+100367,Fiala Market,bar,CZ01,Prague,2026-04-08,2026-04-08
+100368,Pospisil Grocery,retailer,CZ01,Prague,2026-04-09,2026-04-09
+100369,Tavern Fiala,bar,CZ01,Prague,2026-04-23,2026-04-23
+100370,Svoboda Market,retailer,CZ03,Ostrava,2026-04-24,2026-04-24
+100371,Horak Grocery,retailer,CZ01,Prague,2026-04-25,2026-04-25
+100372,Tavern Ruzicka,bar,CZ03,Ostrava,2026-04-28,2026-04-28
+100373,Tavern Kucera,bar,CZ03,Ostrava,2026-05-02,2026-05-02
+100374,Bar Benes,bar,CZ05,Ceske Budejovice,2026-05-07,2026-05-07
+100375,Bar Pospisil,bar,CZ01,Prague,2026-05-11,2026-05-11
+100376,Tavern Benes,bar,CZ05,Ceske Budejovice,2026-05-11,2026-05-11
+100377,Marek Drinks Wholesale,wholesaler,CZ03,Ostrava,2026-05-13,2026-05-13
+100378,Bar Horak,bar,CZ01,Prague,2026-05-13,2026-05-13
+100379,Tavern Prochazka,bar,CZ04,Plzen,2026-05-18,2026-05-18
+100380,Prochazka Grocery,retailer,CZ05,Ceske Budejovice,2026-05-23,2026-05-23
+100381,Benes Grocery,retailer,CZ01,Prague,2026-05-25,2026-05-25
+100382,Dvorak Drinks Wholesale,wholesaler,CZ06,Hradec Kralove,2026-05-28,2026-05-28
+100383,Minimarket Svoboda,retailer,CZ02,Brno,2026-06-03,2026-06-03
+100384,Bar Cerny,bar,CZ03,Ostrava,2026-06-04,2026-06-04
+100385,Pub Cerny,bar,CZ06,Hradec Kralove,2026-06-07,2026-06-07
+100386,Fiala Beverages,wholesaler,CZ02,Brno,2026-06-09,2026-06-09
+100387,Horak Market,retailer,CZ05,Ceske Budejovice,2026-06-09,2026-06-09
+100388,Zeman Drinks Wholesale,wholesaler,CZ02,Brno,2026-06-10,2026-06-10
+100389,Bistro Dvorak,bar,CZ05,Ceske Budejovice,2026-06-15,2026-06-15
+100390,Minimarket Kral,retailer,CZ03,Ostrava,2026-06-18,2026-06-18
+100391,Nemec Market,retailer,CZ01,Prague,2026-06-21,2026-06-21
+100392,Bistro Horak,bar,CZ02,Brno,2026-06-27,2026-06-27
+100393,Sedlacek Market,retailer,CZ02,Brno,2026-07-02,2026-07-02
+100394,Minimarket Zeman,retailer,CZ01,Prague,2026-07-07,2026-07-07
+100395,Bistro Sedlacek,bar,CZ01,Prague,2026-07-09,2026-07-09
+100396,Tavern Cerny,bar,CZ02,Brno,2026-07-09,2026-07-09
+100397,Prochazka Grocery,retailer,CZ01,Prague,2026-07-20,2026-07-20
+100398,Tavern Kral,bar,CZ01,Prague,2026-07-20,2026-07-20
+100399,Bistro Kucera,bar,CZ04,Plzen,2026-07-23,2026-07-23
+100400,Bar Ruzicka,bar,CZ04,Plzen,2026-08-05,2026-08-05

@@ -1,0 +1,3 @@
+customer_id,customer_name,customer_type,dc_code,city,valid_from,extracted_at
+100001,Pub Novak,bar,CZ01,Prague,2026-03-02,2026-03-03 02:05:00
+100002,Svoboda Market,retailer,CZ02,Brno,2026-03-02,2026-03-03 02:05:00

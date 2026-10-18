@@ -1,0 +1,35 @@
+{
+  "name": "Copper Tower",
+  "dataColors": [
+    "#A3480F",
+    "#2B1A12",
+    "#D9A441",
+    "#7A6355",
+    "#1F7A3A",
+    "#F08A4B",
+    "#5C4537",
+    "#E8B65A"
+  ],
+  "background": "#FBF7F1",
+  "foreground": "#2B1A12",
+  "tableAccent": "#A3480F",
+  "good": "#1F7A3A",
+  "neutral": "#D9A441",
+  "bad": "#B42318",
+  "maximum": "#1F7A3A",
+  "center": "#D9A441",
+  "minimum": "#B42318",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FBF7F1" } }, "transparency": 0 }]
+      }
+    },
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E7DCCD" } }, "radius": 6 }]
+      }
+    }
+  }
+}

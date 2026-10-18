@@ -1,0 +1,2 @@
+event_id,shipment_id,carrier_id,status,event_at,delivered_qty,extracted_at
+EV00000001,SH0000002,CR03,PICKED_UP,2026-03-02 06:30:00,,2026-03-03 02:00:00

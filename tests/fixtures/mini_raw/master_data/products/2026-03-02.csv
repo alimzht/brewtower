@@ -1,0 +1,7 @@
+sku,sku_name,brand,brewery,pack,liters_per_pack,launched_on,extracted_at
+CL-KEG50,"Copper Lager, keg 50 l",Copper Lager,Copper Tower Brewery,KEG50,50.0,2026-03-02,2026-03-03 02:05:00
+TP-KEG30,"Tower Pils, keg 30 l",Tower Pils,Copper Tower Brewery,KEG30,30.0,2026-03-02,2026-03-03 02:05:00
+MG-BTL20,"Malt Gold 12, crate 20 x 0.5 l bottles",Malt Gold 12,Moravian Hills Brewery,BTL20,10.0,2026-03-02,2026-03-03 02:05:00
+FI-CAN24,"Foam IPA, tray 24 x 0.5 l cans",Foam IPA,Bohemian Highlands Brewery,CAN24,12.0,2026-03-02,2026-03-03 02:05:00
+ZL-KEG30,"Zero Lager 0.0, keg 30 l",Zero Lager 0.0,Bohemian Highlands Brewery,KEG30,30.0,2026-03-02,2026-03-03 02:05:00
+HV-BTL20,"Hop Valley Pale, crate 20 x 0.5 l bottles",Hop Valley Pale,Moravian Hills Brewery,BTL20,10.0,2026-03-02,2026-03-03 02:05:00

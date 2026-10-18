@@ -1,0 +1,42 @@
+sku,sku_name,brand,brewery,pack,liters_per_pack,launched_on
+CL-BTL20,"Copper Lager, crate 20 x 0.5 l bottles",Copper Lager,Copper Tower Brewery,BTL20,10.0,2026-03-01
+CL-CAN24,"Copper Lager, tray 24 x 0.5 l cans",Copper Lager,Copper Tower Brewery,CAN24,12.0,2026-03-01
+CL-KEG30,"Copper Lager, keg 30 l",Copper Lager,Copper Tower Brewery,KEG30,30.0,2026-03-01
+CL-KEG50,"Copper Lager, keg 50 l",Copper Lager,Copper Tower Brewery,KEG50,50.0,2026-03-01
+ES-BTL20,"Espresso Stout, crate 20 x 0.5 l bottles",Espresso Stout,Copper Tower Brewery,BTL20,10.0,2026-03-01
+ES-CAN24,"Espresso Stout, tray 24 x 0.5 l cans",Espresso Stout,Copper Tower Brewery,CAN24,12.0,2026-03-01
+ES-KEG30,"Espresso Stout, keg 30 l",Espresso Stout,Copper Tower Brewery,KEG30,30.0,2026-03-01
+ES-KEG50,"Espresso Stout, keg 50 l",Espresso Stout,Copper Tower Brewery,KEG50,50.0,2026-03-01
+FI-BTL20,"Foam IPA, crate 20 x 0.5 l bottles",Foam IPA,Bohemian Highlands Brewery,BTL20,10.0,2026-03-01
+FI-CAN24,"Foam IPA, tray 24 x 0.5 l cans",Foam IPA,Bohemian Highlands Brewery,CAN24,12.0,2026-03-01
+FI-KEG30,"Foam IPA, keg 30 l",Foam IPA,Bohemian Highlands Brewery,KEG30,30.0,2026-03-01
+FI-KEG50,"Foam IPA, keg 50 l",Foam IPA,Bohemian Highlands Brewery,KEG50,50.0,2026-03-01
+GA-BTL20,"Granary Amber, crate 20 x 0.5 l bottles",Granary Amber,Moravian Hills Brewery,BTL20,10.0,2026-03-01
+GA-CAN24,"Granary Amber, tray 24 x 0.5 l cans",Granary Amber,Moravian Hills Brewery,CAN24,12.0,2026-03-01
+GA-KEG30,"Granary Amber, keg 30 l",Granary Amber,Moravian Hills Brewery,KEG30,30.0,2026-03-01
+GA-KEG50,"Granary Amber, keg 50 l",Granary Amber,Moravian Hills Brewery,KEG50,50.0,2026-03-01
+HV-BTL20,"Hop Valley Pale, crate 20 x 0.5 l bottles",Hop Valley Pale,Moravian Hills Brewery,BTL20,10.0,2026-03-01
+HV-CAN24,"Hop Valley Pale, tray 24 x 0.5 l cans",Hop Valley Pale,Moravian Hills Brewery,CAN24,12.0,2026-03-01
+HV-KEG30,"Hop Valley Pale, keg 30 l",Hop Valley Pale,Moravian Hills Brewery,KEG30,30.0,2026-03-01
+HV-KEG50,"Hop Valley Pale, keg 50 l",Hop Valley Pale,Moravian Hills Brewery,KEG50,50.0,2026-03-01
+MG-BTL20,"Malt Gold 12, crate 20 x 0.5 l bottles",Malt Gold 12,Moravian Hills Brewery,BTL20,10.0,2026-03-01
+MG-CAN24,"Malt Gold 12, tray 24 x 0.5 l cans",Malt Gold 12,Moravian Hills Brewery,CAN24,12.0,2026-03-01
+MG-KEG30,"Malt Gold 12, keg 30 l",Malt Gold 12,Moravian Hills Brewery,KEG30,30.0,2026-03-01
+MG-KEG50,"Malt Gold 12, keg 50 l",Malt Gold 12,Moravian Hills Brewery,KEG50,50.0,2026-03-01
+ND-BTL20,"Night Shift Dark, crate 20 x 0.5 l bottles",Night Shift Dark,Moravian Hills Brewery,BTL20,10.0,2026-03-01
+ND-CAN24,"Night Shift Dark, tray 24 x 0.5 l cans",Night Shift Dark,Moravian Hills Brewery,CAN24,12.0,2026-03-01
+ND-KEG30,"Night Shift Dark, keg 30 l",Night Shift Dark,Moravian Hills Brewery,KEG30,30.0,2026-03-01
+ND-KEG50,"Night Shift Dark, keg 50 l",Night Shift Dark,Moravian Hills Brewery,KEG50,50.0,2026-03-01
+SW-BTL20,"Summer Wheat, crate 20 x 0.5 l bottles",Summer Wheat,Bohemian Highlands Brewery,BTL20,10.0,2026-05-15
+SW-CAN24,"Summer Wheat, tray 24 x 0.5 l cans",Summer Wheat,Bohemian Highlands Brewery,CAN24,12.0,2026-05-15
+SW-KEG30,"Summer Wheat, keg 30 l",Summer Wheat,Bohemian Highlands Brewery,KEG30,30.0,2026-05-15
+SW-KEG50,"Summer Wheat, keg 50 l",Summer Wheat,Bohemian Highlands Brewery,KEG50,50.0,2026-05-15
+TP-BTL20,"Tower Pils, crate 20 x 0.5 l bottles",Tower Pils,Copper Tower Brewery,BTL20,10.0,2026-03-01
+TP-CAN24,"Tower Pils, tray 24 x 0.5 l cans",Tower Pils,Copper Tower Brewery,CAN24,12.0,2026-03-01
+TP-KEG30,"Tower Pils, keg 30 l",Tower Pils,Copper Tower Brewery,KEG30,30.0,2026-03-01
+TP-KEG50,"Tower Pils, keg 50 l",Tower Pils,Copper Tower Brewery,KEG50,50.0,2026-03-01
+UNKNOWN,Unknown SKU,Unknown,Unknown,UNKNOWN,,
+ZL-BTL20,"Zero Lager 0.0, crate 20 x 0.5 l bottles",Zero Lager 0.0,Bohemian Highlands Brewery,BTL20,10.0,2026-03-01
+ZL-CAN24,"Zero Lager 0.0, tray 24 x 0.5 l cans",Zero Lager 0.0,Bohemian Highlands Brewery,CAN24,12.0,2026-03-01
+ZL-KEG30,"Zero Lager 0.0, keg 30 l",Zero Lager 0.0,Bohemian Highlands Brewery,KEG30,30.0,2026-03-01
+ZL-KEG50,"Zero Lager 0.0, keg 50 l",Zero Lager 0.0,Bohemian Highlands Brewery,KEG50,50.0,2026-03-01
