@@ -70,8 +70,12 @@ plain words (for example `VDATU 20260231 is not a calendar date`). Flagged recor
 | `missing_carrier_id` | completeness | wms_shipments | shipment line without a carrier | 92 | 92 |
 | `missing_delivered_qty` | completeness | carrier_tracking | `DELIVERED` event without a quantity | 97 | 97 |
 | `missing_dc_code` | completeness | master_data | customer without a DC | 4 | 4 |
-| `nonpositive_qty` | validity | erp_orders | quantity 0 or negative | 139 | 139 |
-| `nonpositive_qty` | validity | wms_shipments | shipped quantity 0 or negative | 92 | 92 |
+| `missing_dc_code` | completeness | erp_orders, wms_shipments, master_data | `WERKS` / DC code empty; DC master row without a code | 0 | 0 |
+| `missing_sku` | completeness | erp_orders, wms_shipments, master_data | SKU empty; product master row without a SKU | 0 | 0 |
+| `missing_qty` | completeness | erp_orders, wms_shipments | quantity empty | 0 | 0 |
+| `missing_carrier_id` | completeness | master_data | carrier master row without a code | 0 | 0 |
+| `nonpositive_qty` | validity | erp_orders | quantity 0, negative or not a number | 139 | 139 |
+| `nonpositive_qty` | validity | wms_shipments | shipped quantity 0, negative or not a number | 92 | 92 |
 | `unknown_sku` | validity | erp_orders | `MATNR` not in the product master | 92 | 92 |
 | `unknown_customer` | validity | erp_orders | `KUNNR` not in the customer master | 91 | 91 |
 | `bad_dc_code` | validity | erp_orders | `WERKS` is not a known DC | 95 | 95 |
@@ -91,7 +95,8 @@ plain words (for example `VDATU 20260231 is not a calendar date`). Flagged recor
 | `stale_open_shipment` | freshness | carrier_tracking | shipment still open with no tracking update for more than 48 h at the end of the day | (derived) | 2,857 |
 | **Total** | | | | **2,427** | **5,284** |
 
-All 2,427 planted defects are caught with the same source, date, record ID and check name. The only issues not
+All 2,427 planted defects are caught with the same source, date, record ID and check name. The rows with 0 are
+checks the generator does not plant; the hand-made fixture tests them (`test_empty_and_invalid_values`). The only issues not
 in the answer key are the 2,857 `stale_open_shipment` rows. They are not planted directly: they are what the two
 feed outages cause, and the pipeline works them out day by day. 2,776 of them are Brno shipments in August.
 
@@ -177,7 +182,7 @@ looks odd.
 
 ## Tests
 
-42 pytest tests, about 70 seconds (most of it is generating six months of data twice).
+43 pytest tests, about 70 seconds (most of it is generating six months of data twice).
 
 - **Generator (6):** same seed gives byte-identical files; the answer key has the right schema and values; at
   most one defect per record; the May outage and the Brno gap are really in the files.
@@ -185,8 +190,9 @@ looks odd.
   positives (every issue except `stale_open_shipment` is in the answer key); normal quirks are not flagged
   (padded IDs, `" cz01"`, lower-case statuses, renamed customers); no record is dropped; the DQ score is the mean
   of its non-empty dimensions; re-running gives byte-identical gold files.
-- **KPIs (7):** a hand-made fixture of 6 orders in [`tests/fixtures/mini_raw/`](tests/fixtures/mini_raw) with
-  OTD, OTIF, average delay, late cause and DQ scores worked out by hand in the test comments.
+- **KPIs (8):** a hand-made fixture of 6 orders in [`tests/fixtures/mini_raw/`](tests/fixtures/mini_raw) with
+  OTD, OTIF, average delay, late cause and DQ scores worked out by hand in the test comments; plus a copy of it
+  with empty and invalid SKU, DC and quantity cells and blank master rows, each flagged with the right check.
 
 ## How to run
 
@@ -218,7 +224,7 @@ brewtower/
 │   └── paths.py           folder locations in one place
 ├── sql/
 │   ├── staging/           9 files: decode and standardise each source
-│   ├── checks/            19 files: one per check
+│   ├── checks/            21 files: one per check
 │   └── marts/             11 files: dims, facts, dq_issues, dq_score_daily, delivery_kpis
 ├── data/
 │   ├── raw/               generated daily files + _planted_defects.csv (not committed)

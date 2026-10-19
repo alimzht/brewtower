@@ -195,29 +195,25 @@ def erp_extract(rng, orders, key):
     rid = erp.VBELN + "/" + erp.POSNR
     taken, by_order = set(), erp.groupby("VBELN").groups
 
-    def plant_orders(rate, defect, dimension, reason, mutate):
+    def plant_orders(rate, defect, dimension, reason, col, value_fn):
+        """Corrupt col on every line of about rate * orders whole orders; value_fn(lines) gives the new value."""
         for vbeln in pick(rng, list(by_order), rate, taken):
             idx = by_order[vbeln]
-            mutate(idx)
+            erp.loc[idx, col] = value_fn(idx)
             for i in idx:
                 key.add("erp_orders", erp.at[i, "file_date"], rid[i], defect, dimension, reason)
 
-    def set_col(col, value_fn):
-        def mutate(idx):
-            erp.loc[idx, col] = value_fn(idx)
-        return mutate
-
-    plant_orders(.003, "missing_customer_id", "completeness", "KUNNR is empty", set_col("KUNNR", lambda idx: ""))
+    plant_orders(.003, "missing_customer_id", "completeness", "KUNNR is empty", "KUNNR", lambda idx: "")
     plant_orders(.004, "missing_promised_date", "completeness", "VDATU is empty or SAP null date 00000000",
-                 set_col("VDATU", lambda idx: rng.choice(["00000000", ""])))
+                 "VDATU", lambda idx: rng.choice(["00000000", ""]))
     plant_orders(.002, "unknown_customer", "validity", "KUNNR not in customer master",
-                 set_col("KUNNR", lambda idx: f"{199000 + int(rng.integers(1, 999)):010d}"))
+                 "KUNNR", lambda idx: f"{199000 + int(rng.integers(1, 999)):010d}")
     plant_orders(.002, "bad_dc_code", "validity", "WERKS is not a known DC",
-                 set_col("WERKS", lambda idx: rng.choice(["CZ9", "CZ07", "XX01"])))
+                 "WERKS", lambda idx: rng.choice(["CZ9", "CZ07", "XX01"]))
     plant_orders(.0015, "invalid_date", "validity", "VDATU is not a calendar date",
-                 set_col("VDATU", lambda idx: rng.choice(["20260231", "20260431", "20261301"])))
+                 "VDATU", lambda idx: rng.choice(["20260231", "20260431", "20261301"]))
     plant_orders(.0015, "promised_before_ordered", "validity", "VDATU is earlier than ERDAT",
-                 set_col("VDATU", lambda idx: sap_date(erp.at[idx[0], "file_date"] - timedelta(days=int(rng.integers(1, 4))))))
+                 "VDATU", lambda idx: sap_date(erp.at[idx[0], "file_date"] - timedelta(days=int(rng.integers(1, 4)))))
 
     taken_lines = set(i for v in taken for i in by_order[v])
     for i in pick(rng, list(erp.index), .003, taken_lines):
@@ -364,17 +360,12 @@ def main(raw_dir=RAW):
     orders, wms, events, shipments = simulate(rng, customers, products)
 
     files = {}
-    erp = erp_extract(rng, orders, key)
-    extracted, late = extract_times(rng, DAYS, LATE_FILES["erp_orders"])
-    files["erp_orders"] = (write_daily(erp, raw_dir / "erp_orders", DAYS, extracted), len(erp))
-    for d in sorted(late):
-        key.add("erp_orders", d, "", "late_file", "freshness", "file extracted after the 06:00 SLA")
-
-    w = wms_extract(rng, wms, key)
-    extracted, late = extract_times(rng, DAYS, LATE_FILES["wms_shipments"])
-    files["wms_shipments"] = (write_daily(w, raw_dir / "wms_shipments", DAYS, extracted), len(w))
-    for d in sorted(late):
-        key.add("wms_shipments", d, "", "late_file", "freshness", "file extracted after the 06:00 SLA")
+    for source, extract, rows in (("erp_orders", erp_extract, orders), ("wms_shipments", wms_extract, wms)):
+        df = extract(rng, rows, key)     # extract before extract_times: keeps the seeded draw order
+        extracted, late = extract_times(rng, DAYS, LATE_FILES[source])
+        files[source] = (write_daily(df, raw_dir / source, DAYS, extracted), len(df))
+        for d in sorted(late):
+            key.add(source, d, "", "late_file", "freshness", "file extracted after the 06:00 SLA")
 
     car, car_days, extracted = carrier_extract(rng, events, key)
     files["carrier_tracking"] = (write_daily(car.drop(columns="extracted_at"), raw_dir / "carrier_tracking", car_days, extracted), len(car))

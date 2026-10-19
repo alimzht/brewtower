@@ -1,8 +1,9 @@
 -- Every product (SKU) row received.
 SELECT
     file_date,
-    'products/' || UPPER(TRIM(sku))                         AS record_id,
-    UPPER(TRIM(sku))                                        AS sku,
+    'products/' || COALESCE(NULLIF(UPPER(TRIM(sku)), ''), '(empty)')
+                                                            AS record_id,
+    NULLIF(UPPER(TRIM(sku)), '')                            AS sku,
     sku_name,
     brand,
     brewery,

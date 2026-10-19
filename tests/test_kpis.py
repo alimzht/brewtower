@@ -15,8 +15,11 @@ and the ERP file of 03-03 is empty (header only). Normal quirks that must NOT be
 a WMS dc_code typed " cz01", lowercase statuses from CR04, and customer 100001 renamed in the 03-03 master delta.
 """
 import hashlib
+import shutil
 from datetime import date
 from pathlib import Path
+
+import duckdb
 
 from brewtower import pipeline
 
@@ -91,6 +94,50 @@ def test_dq_score_maths(mini_con):
     assert {score[("carrier_tracking", date(2026, 3, d))][-1] for d in (2, 3, 4)} == {100.0}
     # master data 03-02: 2 customers + 6 SKUs + 2 DCs + 3 carriers = 13 clean rows
     assert score[("master_data", date(2026, 3, 2))] == (13, 100.0, 100.0, 100.0, 100.0)
+
+
+def test_empty_and_invalid_values(tmp_path):
+    # empty cells arrive as NULL, which "NOT IN (...)" never matches: they need their own completeness checks.
+    # Blank master rows are flagged too, and must not switch the validity checks off ("x NOT IN (..., NULL)" is never true).
+    raw = tmp_path / "raw"
+    shutil.copytree(MINI_RAW, raw)
+
+    def edit(path, old, new):
+        text = path.read_text()
+        assert text.count(old) == 1, old                    # the fixture changed: update this test
+        path.write_text(text.replace(old, new))
+
+    erp, wms = raw / "erp_orders" / "2026-03-02.csv", raw / "wms_shipments" / "2026-03-03.csv"
+    edit(erp, "CL-KEG50,2.000,20260303,CZ01", ",,20260303,")              # 50000001: SKU, qty and DC empty
+    edit(erp, "TP-KEG30,4.000,20260302,CZ01", "XX-KEG30,abc,20260302,CZ9")  # 50000002: all three present but invalid
+    edit(wms, "CZ02,MG-BTL20,3,", ",,,")                                    # SH0000003: empty
+    edit(wms, "CZ01,ZL-KEG30,6,", "CZ9,XX-KEG30,-1,")                       # SH0000005: invalid
+    for master, blank in (("products", ",,,,,,,"), ("dcs", ",,,"), ("carriers", ",,")):
+        f = raw / "master_data" / master / "2026-03-02.csv"
+        assert f.read_text().endswith("\n")
+        f.write_text(f.read_text() + blank + "2026-03-03 02:05:00\n")
+
+    pipeline.run(raw, tmp_path / "t.duckdb", tmp_path / "gold")
+    con = duckdb.connect(str(tmp_path / "t.duckdb"), read_only=True)
+    issues = {}
+    for record_id, check, dimension in con.execute(
+            "SELECT record_id, check_name, dimension FROM marts.dq_issues WHERE record_id IS NOT NULL").fetchall():
+        issues.setdefault(record_id, set()).add((check, dimension))
+    blank_keys = con.execute("""SELECT (SELECT COUNT(*) FROM marts.dim_sku WHERE sku IS NULL)
+        + (SELECT COUNT(*) FROM marts.dim_dc WHERE dc_code IS NULL)
+        + (SELECT COUNT(*) FROM marts.dim_carrier WHERE carrier_id IS NULL)""").fetchone()[0]
+    con.close()
+
+    empty = {("missing_sku", "completeness"), ("missing_qty", "completeness"), ("missing_dc_code", "completeness")}
+    invalid = {("unknown_sku", "validity"), ("nonpositive_qty", "validity"), ("bad_dc_code", "validity")}
+    assert issues["0050000001/000010"] == empty
+    assert issues["0050000002/000010"] == invalid
+    assert issues["SH0000003/10"] == empty
+    assert issues["SH0000005/10"] == invalid
+    assert issues["products/(empty)"] == {("missing_sku", "completeness")}
+    assert issues["dcs/(empty)"] == {("missing_dc_code", "completeness")}
+    assert issues["carriers/(empty)"] == {("missing_carrier_id", "completeness")}
+    assert blank_keys == 0                                  # blank master rows do not become dimension members
 
 
 def test_rerun_is_identical(mini):

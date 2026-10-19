@@ -29,10 +29,10 @@ delivered AS (
 kpi_blockers AS (                    -- orders whose KPI inputs are missing or invalid
     SELECT o.order_id FROM marts.dq_issues i JOIN staging.erp_orders o ON o.record_id = i.record_id
     WHERE i.source = 'erp_orders'
-      AND i.check_name IN ('missing_promised_date', 'invalid_date', 'promised_before_ordered', 'nonpositive_qty')
+      AND i.check_name IN ('missing_promised_date', 'invalid_date', 'promised_before_ordered', 'nonpositive_qty', 'missing_qty')
     UNION
     SELECT w.order_id FROM marts.dq_issues i JOIN staging.wms_shipments w ON w.record_id = i.record_id
-    WHERE i.source = 'wms_shipments' AND i.check_name = 'nonpositive_qty'
+    WHERE i.source = 'wms_shipments' AND i.check_name IN ('nonpositive_qty', 'missing_qty')
     UNION
     SELECT s.order_id FROM marts.dq_issues i
     JOIN staging.carrier_events e ON e.record_id = i.record_id
@@ -41,13 +41,13 @@ kpi_blockers AS (                    -- orders whose KPI inputs are missing or i
       AND i.check_name IN ('missing_delivered_qty', 'delivered_before_shipped', 'event_after_extraction')
 ),
 shipment_issues AS (                 -- any record-level issue on the shipment's WMS lines, events or open-shipment days
-    SELECT DISTINCT w.shipment_id FROM marts.dq_issues i JOIN staging.wms_shipments w ON w.record_id = i.record_id
+    SELECT w.shipment_id FROM marts.dq_issues i JOIN staging.wms_shipments w ON w.record_id = i.record_id
     WHERE i.source = 'wms_shipments'
     UNION
-    SELECT DISTINCT e.shipment_id FROM marts.dq_issues i JOIN staging.carrier_events e ON e.record_id = i.record_id
+    SELECT e.shipment_id FROM marts.dq_issues i JOIN staging.carrier_events e ON e.record_id = i.record_id
     WHERE i.source = 'carrier_tracking'
     UNION
-    SELECT DISTINCT record_id FROM marts.dq_issues WHERE check_name = 'stale_open_shipment'
+    SELECT record_id FROM marts.dq_issues WHERE check_name = 'stale_open_shipment'
 ),
 joined AS (
     SELECT o.*, s.shipment_id, s.shipped_at, s.shipped_qty, s.dc_code AS wms_dc_code, s.carrier_id AS wms_carrier_id,
@@ -83,5 +83,5 @@ SELECT j.order_id,
 FROM joined j
 LEFT JOIN marts.dim_carrier cw ON cw.carrier_id = j.wms_carrier_id AND cw.carrier_id <> 'UNKNOWN'
 LEFT JOIN marts.dim_carrier ct ON ct.carrier_id = j.tracking_carrier_id AND ct.carrier_id <> 'UNKNOWN'
-LEFT JOIN (SELECT DISTINCT order_id FROM kpi_blockers) b ON b.order_id = j.order_id
+LEFT JOIN kpi_blockers b ON b.order_id = j.order_id     -- UNION already made it one row per order
 LEFT JOIN shipment_issues si ON si.shipment_id = j.shipment_id

@@ -3,4 +3,4 @@ SELECT 'erp_orders' AS source, file_date, record_id, 'unknown_customer' AS check
        'validity' AS dimension, 'KUNNR ' || customer_raw || ' not in customer master' AS reason, dc_code
 FROM staging.erp_orders
 WHERE customer_raw IS NOT NULL
-  AND (customer_id IS NULL OR customer_id NOT IN (SELECT customer_id FROM staging.customers))
+  AND (customer_id IS NULL OR customer_id NOT IN (SELECT customer_id FROM staging.customers WHERE customer_id IS NOT NULL))
